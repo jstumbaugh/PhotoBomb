@@ -2,8 +2,8 @@ h1 {
 	color: #FFFFFF;
 }
 
-#login {
-	text-align: right;
+body {
+	background-color: #009933;
 }
 
 #header {
@@ -11,17 +11,91 @@ h1 {
 	text-align: center;
 }
 
-#signUp {
+/* For signup box */
+.signUp {
 	margin-top: 50px;
 	text-align: center;
-	border-style: groove;
+	border-style: ridge;
 	border-width: 10px;
 	border-color: green;
 	padding: 10px;
-	margin-left: 400px;
-	margin-right: 400px;
+	background-color: black;
 }
 
-body {
-	background-color: #009933;
+#signUpText {
+	color: #FFFFFF;
+}
+/* For navbar auto generated at http://work.smarchal.com/twbscolor/css/00000000a708fffffaffffff1 */
+.navbar-default {
+  background-color: #000000;
+  border-color: #00a708;
+}
+.navbar-default .navbar-brand {
+  color: #fffffa;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #fffffa;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #fffffa;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #000000;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #fffffa;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #ffffff;
+  background-color: #00a708;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #000000;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #00a708;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #00a708;
+}
+.navbar-default .navbar-toggle {
+  border-color: #00a708;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #00a708;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fffffa;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #fffffa;
+}
+.navbar-default .navbar-link {
+  color: #fffffa;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fffffa;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #00a708;
+  }
 }
