@@ -1,14 +1,14 @@
-h1 {
-	color: #FFFFFF;
-}
-
 body {
-	background-color: #009933;
+	/*background-color: #009933;*/
+  background-image: url("http://i.imgur.com/FUsyxR5.jpg");
+  background-size: 113%;
 }
 
+/* Title and tagline */
 #header {
-	margin-top: 150px;
+	margin-top: 80px;
 	text-align: center;
+  color: black;
 }
 
 /* For signup box */
