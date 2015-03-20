@@ -13,4 +13,4 @@ GET a single object
 http://private-anon-d64c04f2b-assignment51.apiary-mock.com/pics/id
 
 GET an object collection
-http://private-anon-d64c04f2b-assignment51.apiary-mock.com/pics/id
+http://private-5c6f-assignment51.apiary-mock.com/pics
