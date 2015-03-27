@@ -2,14 +2,18 @@
 <html lang="en">
 	<head>
 		<title>PhotoBomb Landing Page</title>
-
 		<meta charset="utf-8">
-
 		<!-- Bootstrap  -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-		
     	<!-- custom CSS -->
 		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<!-- jQuery & Bootstrap JS/CSS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<!-- custom JS -->
+		<script type="text/javascript" src="js/index.js"></script>
+		<!-- Cabin Font -->
+		<link href='http://fonts.googleapis.com/css?family=Cabin:500' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<!-- NavBar -->
@@ -31,18 +35,17 @@
 			    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      		<ul class="nav navbar-nav">
 					        <li class="active"><a href="index.html">Landing Page<span class="sr-only">(current)</span></a></li>
-					        <li><a href="https://www.google.com/">Google</a></li>
 			      		</ul>
 
 			      		<ul class="nav navbar-nav navbar-right">
 			        		<li class="dropdown">
 			          			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Login <span class="caret"></span></a>
 			          			<div class="dropdown-menu" style="padding: 15px; padding-bottom: 15px;">
-									<form method="post" action="login" accept-charset="UTF-8">
+									<form id="loginForm" method="post" action="login" accept-charset="UTF-8">
 										<input style="margin-bottom: 15px;" type="text" placeholder="Username" id="username" name="username">
 										<input style="margin-bottom: 15px;" type="password" placeholder="Password" id="password" name="password">
 										<input style="float: left; margin-right: 10px;" type="checkbox" name="remember-me" id="remember-me" value="1">
-										<label class="string optional">Remember me</label>
+										<label id="rememberMe" class="string optional">Remember me</label>
 										<input class="btn btn-success btn-block" type="submit" id="sign-in" value="Sign In">
 									</form>
 								</div>
@@ -55,28 +58,27 @@
 
 		<!-- Title and text underneath -->
 		<div id="header">
-			<h1>PhotoBomb</h1>
-			<p><b>The most popular pictures on the Internet</b></p>
+			<h1 id="photobombTitle"><b>PhotoBomb</b></h1>
+			<p id="tagline"><b>The most popular pictures on the Internet</b></p>
 		</div>
 
 		<!-- Sign up box -->
 		<div class="signUp well col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 col-lg-offset-4 col-lg-4">
 			<h3 id="signUpText">Sign Up and Contribute Today!</h3>
 			<br>
-			<form accept-charset="UTF-8" method="post">
-				<input class="span3" name="username" placeholder="Username" type="text">
+			<form id="signUpForm" accept-charset="UTF-8" method="post">
+				<input id="signupUsername" class="span3" name="username" placeholder="Username" type="text">
 				<br><br>
-				<input class="span3" name="password" placeholder="Password" type="password">
+				<input id="signupPassword" class="span3" name="password" placeholder="Password" type="password">
 				<br><br>
-				<input class="span3" name="password" placeholder="Confirm Password" type="password"> 
-				<br><br>
+				<input id="signupConfirmPassword" class="span3" name="password" placeholder="Confirm Password" type="password"> 
+				<br>
+				<div style="color:red;">
+					<p><b id="errorMessage"></b></p>
+				</div>
+				<br>
 				<button class="btn btn-success" type="submit">Sign up!</button>
 			</form>
 		</div>
-
-
-		<!-- jQuery & Bootstrap JS -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	</body>
 </html>

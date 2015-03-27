@@ -1,6 +1,6 @@
 body {
 	/*background-color: #009933;*/
-  background-image: url("http://i.imgur.com/FUsyxR5.jpg");
+  background: url("http://i.imgur.com/FUsyxR5.jpg") no-repeat;
   background-size: 113%;
 }
 
@@ -8,7 +8,18 @@ body {
 #header {
 	margin-top: 80px;
 	text-align: center;
+  font-family: 'Cabin', sans-serif;
+  outline-color: white;
   color: black;
+  -webkit-text-fill-color: green; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+#photobombTitle {
+  font-size: 70px;
+}
+#tagline {
+  font-size: 40px;
 }
 
 /* For signup box */
@@ -20,18 +31,23 @@ body {
 	border-color: green;
 	padding: 10px;
 	background-color: black;
+  font-family: 'Cabin', sans-serif;
 }
 
 #signUpText {
 	color: #FFFFFF;
 }
 /* For navbar auto generated at http://work.smarchal.com/twbscolor/css/00000000a708fffffaffffff1 */
+#rememberMe {
+  color: white;
+}
 .navbar-default {
   background-color: #000000;
   border-color: #00a708;
 }
 .navbar-default .navbar-brand {
   color: #fffffa;
+  font-family: 'Cabin', sans-serif;
 }
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
   color: #ffffff;
@@ -41,12 +57,14 @@ body {
 }
 .navbar-default .navbar-nav > li > a {
   color: #fffffa;
+  font-family: 'Cabin', sans-serif;
 }
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
   color: #ffffff;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu {
   background-color: #000000;
+  font-family: 'Cabin', sans-serif;
 }
 .navbar-default .navbar-nav > li > .dropdown-menu > li > a {
   color: #fffffa;
