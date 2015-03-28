@@ -1,7 +1,6 @@
 body {
 	/*background-color: #009933;*/
-  background: url("http://i.imgur.com/FUsyxR5.jpg") no-repeat;
-  background-size: 113%;
+  background-color: green;
   padding-top: 70px;
 }
 
@@ -38,11 +37,7 @@ body {
 #signUpText {
 	color: #FFFFFF;
 }
-
 /* For navbar auto generated at http://work.smarchal.com/twbscolor/css/00000000a708fffffaffffff1 */
-#rememberMe {
-  color: white;
-}
 .navbar-default {
   background-color: #000000;
   border-color: #00a708;
