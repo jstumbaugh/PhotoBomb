@@ -4,39 +4,17 @@ body {
   padding-top: 70px;
 }
 
-/* Title and tagline */
-#header {
-	margin-top: 80px;
-	text-align: center;
-  font-family: 'Cabin', sans-serif;
-  outline-color: white;
-  color: black;
-  -webkit-text-fill-color: green; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-}
-#photobombTitle {
-  font-size: 70px;
-}
-#tagline {
-  font-size: 40px;
+/* Carousel */
+#carousel-example-generic {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-/* For signup box */
-.signUp {
-	margin-top: 50px;
-	text-align: center;
-	border-style: ridge;
-	border-width: 10px;
-	border-color: green;
-	padding: 10px;
-	background-color: black;
-  font-family: 'Cabin', sans-serif;
-}
 
-#signUpText {
-	color: #FFFFFF;
-}
+
+
+
+
 /* For navbar auto generated at http://work.smarchal.com/twbscolor/css/00000000a708fffffaffffff1 */
 .navbar-default {
   background-color: #000000;
