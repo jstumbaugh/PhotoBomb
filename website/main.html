@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app lang="en">
+<html ng-app="main" lang="en">
 	<head>
 		<title>PhotoBomb</title>
 		<meta charset="utf-8">
@@ -74,15 +74,15 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="item active" align="center">
 					<a href="">
-						<img src="http://vignette4.wikia.nocookie.net/clubpenguin/images/d/d8/Ninja_Old_Header.png/revision/latest?cb=20140616202121" height="500" width="500">
+						<img src="https://s-media-cache-ak0.pinimg.com/236x/b0/e2/61/b0e2610a877263e6f1c94696a365aa36.jpg" height="500">
 					</a>
 					<div class="carousel-caption">
-						ninja
+						super troopers
 					</div>
 				</div>
 				<div class="item" align="center">
 					<a href="">
-						<img src="http://www.donalernergolf.com/wp-content/uploads/2013/03/GolfCourse_DonaLerner.jpg" height="500" width="500">
+						<img src="http://www.donalernergolf.com/wp-content/uploads/2013/03/GolfCourse_DonaLerner.jpg">
 					</a>
 					<div class="carousel-caption">
 						golf
@@ -90,7 +90,7 @@
 				</div>
 				<div class="item" align="center">
 					<a href="">
-						<img src="http://newsnetwork.mayoclinic.org/files/2014/05/shutterstock_158881226.jpg" height="500" width="500">
+						<img src="http://newsnetwork.mayoclinic.org/files/2014/05/shutterstock_158881226.jpg">
 					</a>
 					<div class="carousel-caption">
 						golf 2
@@ -112,49 +112,13 @@
 
 		<!-- Pictures -->
 		<div id="thumbnails">
-			<div class="row">
+			<div class="row" ng-controller="pictureCtrl" ng-repeat="for item in jsonArr">
 				<div class="col-sm-6 col-md-3">
-					<div class="thumbnail" ng-controller="pictureCtrl">
-						{{imgHMTL}}
+					<div class="thumbnail">
+						<img ng-src="{{imgsrc}}">
 						<div class="caption">
 							<h4>{{picTitle}}</h4>
-							<p>submitted by: {{username}}</p>
-							<p>
-								<a href="#" class="btn btn-success" role="button">View Picture</a>
-							</p>
-						</div>
-					</div>
-				</div> <!-- end picture -->
-				<div class="col-sm-6 col-md-3">
-					<div class="thumbnail">
-						<img src="https://www.palacasino.com/wp-content/uploads/2009/11/GolfImage.jpg">
-						<div class="caption">
-							<h4>{{picTitle}}</h4>
-							<p>submitted by: {{username}}</p>
-							<p>
-								<a href="#" class="btn btn-success" role="button">View Picture</a>
-							</p>
-						</div>
-					</div>
-				</div> <!-- end picture -->
-				<div class="col-sm-6 col-md-3">
-					<div class="thumbnail">
-						<img src="https://www.palacasino.com/wp-content/uploads/2009/11/GolfImage.jpg">
-						<div class="caption">
-							<h4>Picture Title</h4>
-							<p>submitted by: {{username}}</p>
-							<p>
-								<a href="#" class="btn btn-success" role="button">View Picture</a>
-							</p>
-						</div>
-					</div>
-				</div> <!-- end picture -->
-				<div class="col-sm-6 col-md-3">
-					<div class="thumbnail">
-						<img src="https://www.palacasino.com/wp-content/uploads/2009/11/GolfImage.jpg">
-						<div class="caption">
-							<h4>Picture Title</h4>
-							<p>submitted by: {{username}}</p>
+							<p>submitted by: {{contributor}}</p>
 							<p>
 								<a href="#" class="btn btn-success" role="button">View Picture</a>
 							</p>
