@@ -10,8 +10,11 @@ body {
   margin-left: auto;
 }
 
-
-
+/* Pictures */
+#thumbnails {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
 
 
