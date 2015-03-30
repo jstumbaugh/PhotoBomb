@@ -5,6 +5,11 @@ $( document ).ready( function() {
 		//alert("searched");
 	}); // end of search function
 
+	$("#logout").submit( function(event) {
+		event.preventDefault();
+		alert("logout");
+	}); // end of logout function
+
 	window.onload = loadPics();
 
 });
