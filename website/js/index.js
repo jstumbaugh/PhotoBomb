@@ -40,7 +40,7 @@ $( document ).ready( function() {
 		    		document.getElementById("errorMessage").innerHTML = "";
 		    		alert("Successfully Created Account");
 		    		// Redirect to index 
-	    			//window.location.replace("index.html");
+	    			window.location.replace("main.html");
 		    	}
 		    	else {
 		    		alert("no go");

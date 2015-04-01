@@ -7,6 +7,13 @@ body {
 #accountPanel {
   background:green;
   border-color: green;
+  color:white;
+}
+
+#accountInfo {
+  background-color: black;
+  color:white;
+  text-align: center;
 }
 
 /* Pictures */

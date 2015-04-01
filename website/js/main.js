@@ -8,14 +8,14 @@ $( document ).ready( function() {
 
 	$("#logout").submit( function(event) {
 		event.preventDefault();
-		alert("logout");
+		alert("Successfully Logged Out");
 		window.location.replace("index.html");
 	}); // end of logout function
 
 
-	$("#viewProfile").submit( function(event) {
+	$("#viewAccount").submit( function(event) {
 		event.preventDefault();
-		//window.location.replace("profile.html");
+		window.location.replace("account.html");
 	}); // end of View Profile Function
 
 });
