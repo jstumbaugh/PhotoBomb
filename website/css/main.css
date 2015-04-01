@@ -10,13 +10,22 @@ body {
   margin-left: auto;
 }
 
+#topPicsToday {
+  color:white;
+  text-align: center;
+}
+
 /* Pictures */
 #thumbnails {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-
+#footer {
+   text-align: center;
+   background:black;
+   color:green;
+}
 
 /* For navbar auto generated at http://work.smarchal.com/twbscolor/css/00000000a708fffffaffffff1 */
 .navbar-default {
