@@ -121,7 +121,21 @@
 		<!-- Pictures will be filled through JavaScript-->
 		<div id="thumbnails">
 			<div id="pictures" class="row" ng-controller="pictureCtrl">
-			</div>
+
+				<div ng-repeat="pic in picArray"><!-- picArray will be added in JS -->
+					<div class="col-sm-6 col-md-3">
+						<div class="thumbnail">
+							<img ng-src="{{pic.imgsrc}}">
+							<div class="caption">
+								<h4>{{pic.picTitle}}</h4>
+								<p>submitted by: {{pic.contributor}}</p>
+								<p><a href="" class="btn btn-success" role="button">View Picture</a></p>
+							</div>
+						</div>
+					</div>
+				</div><!-- End of repeat -->
+
+			</div><!-- End of pictureCtrl -->
 		</div>
 
 		<!-- Footer -->
