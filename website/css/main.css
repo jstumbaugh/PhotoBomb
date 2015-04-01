@@ -5,7 +5,7 @@ body {
 }
 
 /* Carousel */
-#carousel-example-generic {
+#carousel-example-generic, .carouselImg {
   margin-right: auto;
   margin-left: auto;
 }
