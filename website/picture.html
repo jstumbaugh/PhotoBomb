@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html ng-app="picture" lang="en">
+	<head>
+		<title>PhotoBomb</title>
+		<meta charset="utf-8">
+		<!-- Bootstrap  -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    	<!-- custom CSS -->
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<!-- jQuery, Bootstrap JS/CSS, AngularJS -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+		<!-- custom JS (main for search and view account) -->
+		<script type="text/javascript" src="js/picture.js"></script>
+		<!-- <script type="text/javascript" src="js/main.js"></script> -->
+
+		<!-- Cabin Font -->
+		<link href='http://fonts.googleapis.com/css?family=Cabin:500' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+		<!-- NavBar -->
+		<div class="contaniner">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid"> <!-- navbar-inverse for colors --> 
+					<!-- Brand and toggle get grouped for better mobile display -->
+			    	<div class="navbar-header">
+			      		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        		<span class="sr-only">Toggle navigation</span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+					        <span class="icon-bar"></span>
+			      		</button>
+			      		<a class="navbar-brand" href="main.html">PhotoBomb</a>
+			    	</div>
+
+			    	<!-- Collect the nav links, forms, and other content for toggling -->
+			    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      		<ul class="nav navbar-nav">
+					        <li class="active"><a href="main.html">Picture<span class="sr-only">(current)</span></a></li>
+			      		</ul>
+
+			      		<!-- Search Form -->
+						<form id="search" class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-success">Submit</button>
+						</form>
+
+			      		<ul class="nav navbar-nav navbar-right">
+			        		<li class="dropdown">
+			          			<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Account <span class="caret"></span></a>
+			          			<div class="dropdown-menu" style="padding: 15px; padding-bottom: 15px;">
+									<!-- Account Info -->
+									<h3 style="color:white;">johnnychimpo</h3>
+									<form id="viewAccount">
+										<button type="submit" class="btn btn-success">View Account</button>
+									</form>
+									<br>
+									<form id="logout">
+										<button type="submit" class="btn btn-success">Logout</button>
+									</form>
+								</div>
+			        		</li>
+			      		</ul>
+					</div><!-- /.navbar-collapse -->
+			  	</div><!-- /.container-fluid -->
+			</nav>
+		</div><!-- End of NavBar -->
+
+		
+		<div id="picPanel" class="panel panel-default" ng-conroller="picCtrl">
+			<div class="panel-heading">
+				<h4>{{picTitle}}</h4>
+			</div>
+			<div class="panel-body">
+				<img ng-src="{{imgsrc}}" src="">
+				<p>submitted by: {{contributor}}</p>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div id="footer">
+			<h3>PhotoBomb</h3>
+			<p>Created by: Jason Stumbaugh</p>
+			<p>&#169; 2015</p>
+		</div>
+	</body>
+</html>

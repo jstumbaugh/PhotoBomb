@@ -16,7 +16,7 @@ $( document ).ready( function() {
 	    	else
 	    		alert("Account not found.");
 	    	// Redirect to index 
-	    	//window.location.replace("index.html");
+	    	window.location.replace("main.html");
 	    })
 	    .fail( function() {
 	    	alert("An error occured logging you in.");
