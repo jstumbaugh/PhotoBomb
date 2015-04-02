@@ -17,6 +17,6 @@ app.controller('userCtrl', function($scope) {
 	})
 	.fail(function(data, status){
 		alert('Error occured retireving account information.');
-		window.location.replace("index.html");
+		window.location.replace("main.html");
 	});
 });
