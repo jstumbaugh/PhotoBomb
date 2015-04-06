@@ -20,6 +20,22 @@ $( document ).ready( function() {
 
 });
 
+Parse.initialize("4YUumbwDoIOBcvA70vOQarhAwW2EpUuNB48ymoxa", "lWQ9zJCAFs31DZ38NimVY59Jpy0l0HZGBxk0IAzX");
+
+// Parse Class
+// USE COLLECTIONS
+// var Pictures = Parse.Object.extend("Picture");
+// var query = new Parse.Query(Pictures);
+// query.get("uniqueID", {
+//   success: function(picture) {
+//     // The object was retrieved successfully.
+//   },
+//   error: function(object, error) {
+//     // The object was not retrieved successfully.
+//     // error is a Parse.Error with an error code and message.
+//   }
+// });
+
 
 
 // For angular controller 
