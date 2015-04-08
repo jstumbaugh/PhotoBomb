@@ -1,54 +1,47 @@
+// initialize application ID
+Parse.initialize("4YUumbwDoIOBcvA70vOQarhAwW2EpUuNB48ymoxa", "lWQ9zJCAFs31DZ38NimVY59Jpy0l0HZGBxk0IAzX");
+
 $( document ).ready( function() {
 
 	/* Login Function */
 	
 	$("#loginForm").submit( function(event) {
 		event.preventDefault();
-		var user = new Object();
-		user.username = $("#username").val();
-		user.password = $("#password").val();
-		// user now has email and password stored in it
-
-		// url for apiary: http://private-5c6f-assignment51.apiary-mock.com/users
-	    $.post("http://private-5c6f-assignment51.apiary-mock.com/users", JSON.stringify(user), function(data) {
-	    	if(data == 100)
-	    		alert("Successfully Logged In");
-	    	else
-	    		alert("Account not found.");
-	    	// Redirect to index 
-	    	window.location.replace("main.html");
-	    })
-	    .fail( function() {
-	    	alert("An error occured logging you in.");
-	    });
+		// Parse Login
+		Parse.User.logIn( $("#username").val() , $("#password").val(), {
+			success: function(user) {
+				alert("Success!!!");
+				// redirect to main
+				window.location.replace("main.html");
+			},
+			error: function(user, error) {
+				// Show the error message somewhere and let the user try again.
+				alert("Error: " + error.code + " " + error.message);
+			}
+		});
 	}); // end of login function
 	
 	
 	/* Sign Up Function */
 	$("#signUpForm").submit( function(event) {
 		event.preventDefault();
-		var user = new Object();
-		user.email = $("#signupEmail").val();
-		user.password = $("#signupPassword").val();
-		var confirmPassword = $("#signupConfirmPassword").val();
+		var user = new Parse.User();
+		user.set( "username", $("#signupUsername").val() );
+		user.set( "password", $("#signupPassword").val() );
 
-		if (user.password === confirmPassword) {
-			// url for apiary http://private-5c6f-assignment51.apiary-mock.com/signup/email
-			$.post("http://private-5c6f-assignment51.apiary-mock.com/signup/email", JSON.stringify(user), function( data ) {
-				// success function
-				if(data == 100) {
-		    		document.getElementById("errorMessage").innerHTML = "";
-		    		alert("Successfully Created Account");
-		    		// Redirect to index 
-	    			window.location.replace("main.html");
-		    	}
-		    	else {
-		    		alert("no go");
-		    		document.getElementById("errorMessage").innerHTML = "Account already exisits with that email address.";
-		    	}
-			})
-			.fail( function() {
-				alert("Error occured creating an account");
+		// if passwords are the same
+		if ( $("#signupPassword").val() === $("#signupConfirmPassword").val() ) {
+			// Parse SignUp
+			user.signUp(null, {
+				success: function(user) {
+					alert("Success!!!");
+					// redirect to main
+					window.location.replace("main.html");
+				},
+				error: function(user, error) {
+					// Show the error message somewhere and let the user try again.
+					alert("Error: " + error.code + " " + error.message);
+				}
 			});
 		} // end of if
 		else { // passwords are not the same
