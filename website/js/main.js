@@ -6,19 +6,6 @@ $( document ).ready( function() {
 	var currentUser = Parse.User.current();
 	document.getElementById("username").innerHTML = currentUser.attributes.username;
 
-	$("#search").submit( function(event) {
-		event.preventDefault();
-		//alert("searched");
-	}); // end of search function
-
-
-	$("#logout").submit( function(event) {
-		event.preventDefault();
-		Parse.User.logOut();
-		alert("Successfully Logged Out");
-		window.location.replace("index.html");
-	}); // end of logout function
-
 
 	$("#viewAccount").submit( function(event) {
 		event.preventDefault();

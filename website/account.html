@@ -3,6 +3,8 @@
 	<head>
 		<title>PhotoBomb</title>
 		<meta charset="utf-8">
+		<!-- Parse -->
+		<script type="text/javascript" src="//www.parsecdn.com/js/parse-1.4.0.min.js"></script>
 		<!-- Bootstrap  -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     	<!-- custom CSS -->
@@ -11,8 +13,9 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-		<!-- custom JS (main.js for search) -->
-		<script type="text/javascript" src="js/main.js"></script>
+		<!-- custom JS -->
+		<script type="text/javascript" src="js/search.js"></script>
+		<script type="text/javascript" src="js/logout.js"></script>
 		<script type="text/javascript" src="js/account.js"></script>
 		<!-- Cabin Font -->
 		<link href='http://fonts.googleapis.com/css?family=Cabin:500' rel='stylesheet' type='text/css'>
@@ -36,7 +39,7 @@
 			    	<!-- Collect the nav links, forms, and other content for toggling -->
 			    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      		<ul class="nav navbar-nav">
-					        <li class="active"><a href="main.html">My Account<span class="sr-only">(current)</span></a></li>
+					        <li class="active"><a href="account.html">My Account<span class="sr-only">(current)</span></a></li>
 			      		</ul>
 
 			      		<!-- Search Form -->
@@ -57,8 +60,9 @@
 			
 			<div class="panel-body"  ng-controller="userCtrl">
 				<h1 id="accountInfo">Account Information</h1>
-				<h2 id="username">Username: {{username}}</h2>
-				<h2 id="email">Email Address: {{email}}</h2>
+				<h2 id="username">Username: </h2>
+				<h4>{{username}}</h4>
+				<br>
 				<form id="logout">
 					<button type="submit" class="btn btn-danger">Logout</button>
 				</form>
